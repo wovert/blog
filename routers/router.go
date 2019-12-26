@@ -29,4 +29,12 @@ func init() {
 	// 全匹配
 	beego.Router("/download/test/*", &controllers.IndexController{}, "get:GetFullMatch")
 
+	beego.Router("/mysql", &controllers.IndexController{}, "get:ShowMySQL")
+
+	beego.Router("/orm", &controllers.OrmController{}, "get:ShowOrm")
+
+	beego.Router("/orm/insert", &controllers.OrmController{}, "get:Insert")
+	beego.Router("/orm/select", &controllers.OrmController{}, "get:Select")
+	beego.Router("/orm/update", &controllers.OrmController{}, "get:Update")
+
 }
